@@ -1,0 +1,337 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.12 0.02 265);
+  --foreground: oklch(0.95 0.05 200);
+  --card: oklch(0.18 0.03 265);
+  --card-foreground: oklch(0.95 0.05 200);
+  --popover: oklch(0.15 0.02 265);
+  --popover-foreground: oklch(0.95 0.05 200);
+  --primary: oklch(0.75 0.18 195);
+  --primary-foreground: oklch(0.12 0.02 265);
+  --secondary: oklch(0.78 0.2 330);
+  --secondary-foreground: oklch(0.12 0.02 265);
+  --muted: oklch(0.25 0.03 265);
+  --muted-foreground: oklch(0.65 0.04 200);
+  --accent: oklch(0.85 0.15 95);
+  --accent-foreground: oklch(0.12 0.02 265);
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.95 0.05 200);
+  --border: oklch(0.3 0.05 265);
+  --input: oklch(0.25 0.03 265);
+  --ring: oklch(0.75 0.18 195);
+  --chart-1: oklch(0.75 0.18 195);
+  --chart-2: oklch(0.78 0.2 330);
+  --chart-3: oklch(0.85 0.15 95);
+  --chart-4: oklch(0.7 0.15 285);
+  --chart-5: oklch(0.68 0.2 50);
+  --radius: 0.25rem;
+  --sidebar: oklch(0.15 0.02 265);
+  --sidebar-foreground: oklch(0.95 0.05 200);
+  --sidebar-primary: oklch(0.75 0.18 195);
+  --sidebar-primary-foreground: oklch(0.12 0.02 265);
+  --sidebar-accent: oklch(0.25 0.03 265);
+  --sidebar-accent-foreground: oklch(0.95 0.05 200);
+  --sidebar-border: oklch(0.3 0.05 265);
+  --sidebar-ring: oklch(0.75 0.18 195);
+}
+
+.dark {
+  --background: oklch(0.12 0.02 265);
+  --foreground: oklch(0.95 0.05 200);
+  --card: oklch(0.18 0.03 265);
+  --card-foreground: oklch(0.95 0.05 200);
+  --popover: oklch(0.15 0.02 265);
+  --popover-foreground: oklch(0.95 0.05 200);
+  --primary: oklch(0.75 0.18 195);
+  --primary-foreground: oklch(0.12 0.02 265);
+  --secondary: oklch(0.78 0.2 330);
+  --secondary-foreground: oklch(0.12 0.02 265);
+  --muted: oklch(0.25 0.03 265);
+  --muted-foreground: oklch(0.65 0.04 200);
+  --accent: oklch(0.85 0.15 95);
+  --accent-foreground: oklch(0.12 0.02 265);
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.95 0.05 200);
+  --border: oklch(0.3 0.05 265);
+  --input: oklch(0.25 0.03 265);
+  --ring: oklch(0.75 0.18 195);
+  --chart-1: oklch(0.75 0.18 195);
+  --chart-2: oklch(0.78 0.2 330);
+  --chart-3: oklch(0.85 0.15 95);
+  --chart-4: oklch(0.7 0.15 285);
+  --chart-5: oklch(0.68 0.2 50);
+  --sidebar: oklch(0.15 0.02 265);
+  --sidebar-foreground: oklch(0.95 0.05 200);
+  --sidebar-primary: oklch(0.75 0.18 195);
+  --sidebar-primary-foreground: oklch(0.12 0.02 265);
+  --sidebar-accent: oklch(0.25 0.03 265);
+  --sidebar-accent-foreground: oklch(0.95 0.05 200);
+  --sidebar-border: oklch(0.3 0.05 265);
+  --sidebar-ring: oklch(0.75 0.18 195);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Gaming-themed custom styles and animations */
+@layer utilities {
+  .pixel-corners {
+    clip-path: polygon(
+      0 4px,
+      4px 4px,
+      4px 0,
+      calc(100% - 4px) 0,
+      calc(100% - 4px) 4px,
+      100% 4px,
+      100% calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) 100%,
+      4px 100%,
+      4px calc(100% - 4px),
+      0 calc(100% - 4px)
+    );
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px oklch(0.75 0.18 195), 0 0 20px oklch(0.75 0.18 195), 0 0 30px oklch(0.75 0.18 195);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px oklch(0.78 0.2 330), 0 0 20px oklch(0.78 0.2 330), 0 0 30px oklch(0.78 0.2 330);
+  }
+
+  .text-glow-yellow {
+    text-shadow: 0 0 10px oklch(0.85 0.15 95), 0 0 20px oklch(0.85 0.15 95), 0 0 30px oklch(0.85 0.15 95);
+  }
+
+  .box-glow-cyan {
+    box-shadow: 0 0 15px oklch(0.75 0.18 195 / 0.5), 0 0 30px oklch(0.75 0.18 195 / 0.3);
+  }
+
+  .box-glow-pink {
+    box-shadow: 0 0 15px oklch(0.78 0.2 330 / 0.5), 0 0 30px oklch(0.78 0.2 330 / 0.3);
+  }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: scan 8s linear infinite;
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .glitch {
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0%,
+    90%,
+    100% {
+      transform: translate(0);
+    }
+    91% {
+      transform: translate(-2px, 2px);
+    }
+    92% {
+      transform: translate(2px, -2px);
+    }
+    93% {
+      transform: translate(-2px, 2px);
+    }
+    94% {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  /* Added CRT flicker and improved scanline animations */
+  @keyframes crt-flicker {
+    0% {
+      opacity: 0.01;
+    }
+    5% {
+      opacity: 0.02;
+    }
+    10% {
+      opacity: 0.01;
+    }
+    15% {
+      opacity: 0.03;
+    }
+    20% {
+      opacity: 0.01;
+    }
+    25% {
+      opacity: 0.02;
+    }
+    100% {
+      opacity: 0.01;
+    }
+  }
+
+  .animate-crt-flicker {
+    animation: crt-flicker 0.15s infinite;
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-2px, -2px);
+    }
+    20% {
+      transform: translate(2px, 2px);
+    }
+    30% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(2px, -2px);
+    }
+    50% {
+      transform: translate(-1px, 1px);
+    }
+  }
+
+  .animate-shake {
+    animation: shake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation-iteration-count: 5;
+  }
+
+  .pixel-border {
+    border: 2px solid currentColor;
+    box-shadow: -2px -2px 0 currentColor, 2px -2px 0 currentColor, -2px 2px 0 currentColor, 2px 2px 0 currentColor;
+  }
+
+  /* Added rarity color utilities and holographic shine animation for the Collection Vault */
+  .rarity-common {
+    color: oklch(0.65 0.04 200);
+  }
+  /* Fixed rarity color mappings to match component expectations */
+  .text-gray-500 {
+    color: oklch(0.65 0.04 200);
+  }
+  .text-cyan-500 {
+    color: oklch(0.75 0.18 195);
+  }
+  .text-pink-500 {
+    color: oklch(0.78 0.2 330);
+  }
+  .text-yellow-500 {
+    color: oklch(0.85 0.15 95);
+  }
+
+  /* Fixed border color utilities */
+  .border-gray-500 {
+    border-color: oklch(0.65 0.04 200);
+  }
+  .border-cyan-500 {
+    border-color: oklch(0.75 0.18 195);
+  }
+  .border-pink-500 {
+    border-color: oklch(0.78 0.2 330);
+  }
+  .border-yellow-500 {
+    border-color: oklch(0.85 0.15 95);
+  }
+
+  .holographic-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .holographic-shine::after {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -50%;
+    width: 200%;
+    height: 300%;
+    background: linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.2) 45%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.2) 55%,
+      rgba(255, 255, 255, 0) 70%,
+      transparent 100%
+    );
+    transform: rotate(-10deg);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+  }
+
+  .group:hover .holographic-shine::after {
+    transform: translate(50%, 50%) rotate(-10deg);
+  }
+}
