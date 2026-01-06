@@ -78,7 +78,7 @@ export function ContactSection() {
 
         <div className="text-center mt-12">
           <p className="text-xs font-[family-name:var(--font-gaming)] text-muted-foreground">
-            © 2026 DEVELOPER PORTFOLIO. PRESS START TO CONTINUE.
+            © 2024 KenzoNutss. All rights reserved.
           </p>
         </div>
       </div>

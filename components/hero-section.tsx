@@ -145,7 +145,7 @@ export function HeroSection() {
 
         <Link href="/about" className="pt-12 animate-bounce block">
           <div className="text-primary text-2xl">▼</div>
-          <p className="text-xs text-muted-foreground font-[family-name:var(--font-gaming)] mt-2">SCROLL TO CONTINUE</p>
+          <p className="text-xs text-muted-foreground font-[family-name:var(--font-gaming)] mt-2">CLICK TO CONTINUE</p>
         </Link>
       </div>
     </section>
