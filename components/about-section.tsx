@@ -1,6 +1,6 @@
 import { ArcadeHeading } from "@/components/arcade-heading"
 import { GameCard } from "@/components/game-card"
-import { StatusBar } from "@/components/status-bar"
+import { SkillIndicator } from "@/components/skill-indicator"
 
 export function AboutSection() {
   return (
@@ -36,10 +36,10 @@ export function AboutSection() {
               <div>
                 <h3 className="font-[family-name:var(--font-gaming)] text-secondary text-sm mb-4">SKILL TREE</h3>
                 <div className="space-y-4">
-                  <StatusBar label="MOVE SMART CONTRACT" value={80} color="cyan" />
-                  <StatusBar label="FRONTEND (JS/TS)" value={85} color="pink" />
-                  <StatusBar label="NESTJS BACKEND" value={65} color="yellow" />
-                  <StatusBar label="C# BACKEND" value={90} color="cyan" />
+                  <SkillIndicator label="MOVE SMART CONTRACT" value={80} color="cyan" />
+                  <SkillIndicator label="FRONTEND (JS/TS)" value={85} color="pink" />
+                  <SkillIndicator label="NESTJS BACKEND" value={65} color="yellow" />
+                  <SkillIndicator label="C# BACKEND" value={90} color="cyan" />
                 </div>
               </div>
             </div>

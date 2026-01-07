@@ -2,7 +2,7 @@
 
 import { ArcadeHeading } from "@/components/arcade-heading"
 import { PixelButton } from "@/components/pixel-button"
-import { StatusBar } from "@/components/status-bar"
+import { SkillIndicator } from "@/components/skill-indicator"
 import { Github, Instagram, Mail, XIcon } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -13,8 +13,7 @@ const PROFILE_LEVELS = [
     level: 77,
     title: "Fullstack Web3 Developer",
     image: ProfileImage,
-    description: "The ultimate form. Seamlessly bridging frontend and backend with pixel perfection.",
-    stats: { skills: 99, experience: 95, creativity: 99 },
+    stats: { skills: 89, experience: 80, creativity: 100 },
   },
 ]
 
@@ -88,16 +87,13 @@ export function HeroSection() {
           <ArcadeHeading level={1} glow="cyan" className="mb-4 leading-tight">
             {currentProfile.title}
           </ArcadeHeading>
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
-            {currentProfile.description}
-          </p>
         </div>
 
-        {/* Status bars */}
-        <div className="max-w-md mx-auto space-y-3 pt-8">
-          <StatusBar label="SKILLS" value={currentProfile.stats.skills} color="cyan" />
-          <StatusBar label="EXPERIENCE" value={currentProfile.stats.experience} color="pink" />
-          <StatusBar label="CREATIVITY" value={currentProfile.stats.creativity} color="yellow" />
+        {/* Skill indicators */}
+        <div className="max-w-md mx-auto space-y-4 pt-8">
+          <SkillIndicator label="SKILLS" value={currentProfile.stats.skills} color="cyan" />
+          <SkillIndicator label="EXPERIENCE" value={currentProfile.stats.experience} color="pink" />
+          <SkillIndicator label="CREATIVITY" value={currentProfile.stats.creativity} color="yellow" />
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-8">
